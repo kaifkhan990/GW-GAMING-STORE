@@ -510,6 +510,101 @@
     #topup-store .feature-bottom { align-items:stretch; flex-direction:column; }
   }
 
+
+  /* Refined rotating game banners */
+  #topup-store .showcase-window {
+    border:1px solid #ffffff24;
+    border-radius:22px;
+    background:#091525;
+    box-shadow:0 18px 42px #0008, inset 0 1px #ffffff12;
+  }
+  #topup-store .showcase-slide {
+    min-height:250px;
+    isolation:isolate;
+  }
+  #topup-store .showcase-slide:before {
+    content:"";
+    position:absolute;
+    z-index:0;
+    inset:0;
+    pointer-events:none;
+    background:linear-gradient(90deg,#071322e8 0%,#071322b8 48%,#0713223d 100%),linear-gradient(0deg,#071322a8 0%,transparent 58%);
+  }
+  #topup-store .showcase-copy,
+  #topup-store .showcase-mark { position:relative; z-index:1; }
+  #topup-store .showcase-copy small {
+    display:inline-flex;
+    align-items:center;
+    min-height:27px;
+    padding:6px 10px;
+    border:1px solid #ffc85a66;
+    border-radius:999px;
+    background:#081322a8;
+    color:#ffd879;
+    font-size:10px;
+    letter-spacing:1.1px;
+    line-height:1.2;
+  }
+  #topup-store .showcase-copy h2 {
+    margin:12px 0 8px;
+    color:#fff;
+    font-size:clamp(29px,6vw,48px);
+    font-weight:900;
+    line-height:1.05;
+    letter-spacing:-1px;
+    text-shadow:0 3px 18px #000b;
+  }
+  #topup-store .showcase-copy p {
+    max-width:460px;
+    color:#f0f5fb;
+    font-size:14px;
+    line-height:1.55;
+    text-shadow:0 2px 8px #000d;
+  }
+  #topup-store .showcase-mark {
+    transform:none;
+    border:1px solid #ffffff45;
+    border-radius:22px;
+    background:linear-gradient(145deg,#ffffff20,#071322b8);
+    box-shadow:0 14px 30px #0008,inset 0 1px #ffffff35;
+    backdrop-filter:blur(8px);
+  }
+  #topup-store .showcase-mark img {
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    filter:drop-shadow(0 4px 9px #000d);
+  }
+  #topup-store .showcase-controls {
+    z-index:2;
+    right:14px;
+    bottom:12px;
+    padding:5px 7px;
+    border:1px solid #ffffff24;
+    border-radius:999px;
+    background:#071322b8;
+    backdrop-filter:blur(8px);
+  }
+  #topup-store .showcase-arrow {
+    width:34px;
+    height:34px;
+    border-color:#ffffff38;
+    background:#ffffff12;
+  }
+  #topup-store .showcase-dot[aria-current=true] { box-shadow:0 0 10px #ffc85a88; }
+  @media screen and (max-width:640px) {
+    #topup-store .showcase-window { border-radius:20px; }
+    #topup-store .showcase-slide { min-height:230px; padding:20px 17px 52px; gap:12px; }
+    #topup-store .showcase-copy { max-width:calc(100% - 82px); }
+    #topup-store .showcase-copy h2 { font-size:clamp(25px,7.5vw,34px); }
+    #topup-store .showcase-copy p { font-size:13px; }
+    #topup-store .showcase-mark { width:74px; height:74px; flex-basis:74px; padding:7px; border-radius:19px; }
+    #topup-store .showcase-controls { right:10px; bottom:9px; gap:6px; }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    #topup-store .showcase-track { transition:none !important; }
+  }
+
 </style>
 
 <div id="topup-store">
@@ -534,9 +629,9 @@
     <div id="home-view" class="home-view">
     <section class="showcase" aria-label="Featured game top-ups">
       <div class="showcase-window"><div class="showcase-track">
-        <article class="showcase-slide pubg"><div class="showcase-copy"><small>Featured top-up</small><h2>PUBG Mobile</h2><p>Global UC, WOW Tokens and KR Login packs. Choose a product to see its available packs.</p></div><div class="showcase-mark"><img src="https://www.citypng.com/public/uploads/preview/hd-player-unknown-battlegrounds-black-mobile-logo-701751694790561ujmtc6dwxl.png?v=2026020600" alt="PUBG Mobile"></div></article>
-        <article class="showcase-slide ff"><div class="showcase-copy"><small>Diamonds for both editions</small><h2>Free Fire</h2><p>Free Fire and Free Fire MAX share the same diamond pack prices.</p></div><div class="showcase-mark"><img src="https://www.citypng.com/public/uploads/preview/official-free-fire-battlegrounds-logo-701751694791335un11hpdefy.png" alt="Free Fire"></div></article>
-        <article class="showcase-slide delta"><div class="showcase-copy"><small>Top-up available</small><h2>Delta Force Coins</h2><p>Browse Delta Coin packs and confirm current availability with us.</p></div><div class="showcase-mark"><img src="https://city-png.b-cdn.net/thumbnail/thumbnail_public/temp/original-delta-force-gameplay-logo-sign-hd-png-701751715709024tcufomttoy.webp?v=2026031802" alt="Delta Force"></div></article>
+        <article class="showcase-slide pubg"><div class="showcase-copy"><small>GLOBAL UC · QUICK ORDER</small><h2>PUBG Mobile UC</h2><p>Choose your UC pack and send your player details on WhatsApp.</p></div><div class="showcase-mark"><img src="https://www.citypng.com/public/uploads/preview/hd-player-unknown-battlegrounds-black-mobile-logo-701751694790561ujmtc6dwxl.png?v=2026020600" alt="PUBG Mobile"></div></article>
+        <article class="showcase-slide ff"><div class="showcase-copy"><small>FREE FIRE + FREE FIRE MAX</small><h2>Free Fire Diamonds</h2><p>One clear diamond price list for both editions. Choose a pack to order.</p></div><div class="showcase-mark"><img src="https://www.citypng.com/public/uploads/preview/official-free-fire-battlegrounds-logo-701751694791335un11hpdefy.png" alt="Free Fire"></div></article>
+        <article class="showcase-slide delta"><div class="showcase-copy"><small>COINS · TOP-UP AVAILABLE</small><h2>Delta Force</h2><p>Explore available Delta Coin packs and message us to confirm your order.</p></div><div class="showcase-mark"><img src="https://city-png.b-cdn.net/thumbnail/thumbnail_public/temp/original-delta-force-gameplay-logo-sign-hd-png-701751715709024tcufomttoy.webp?v=2026031802" alt="Delta Force"></div></article>
       </div><div class="showcase-controls"><button class="showcase-arrow" type="button" aria-label="Previous banner">‹</button><div class="showcase-dots"><button class="showcase-dot" type="button" aria-label="Show PUBG Mobile banner"></button><button class="showcase-dot" type="button" aria-label="Show Free Fire banner"></button><button class="showcase-dot" type="button" aria-label="Show Delta Force banner"></button></div><button class="showcase-arrow" type="button" aria-label="Next banner">›</button></div></div>
     </section>
     <section class="hero">
@@ -563,10 +658,10 @@
           <a class="uc-pack order-link" data-game="PUBG Mobile Global UC — 325 UC for ₹560" href="#contact"><b>325 UC</b><span>₹560</span></a>
           <a class="uc-pack order-link" data-game="PUBG Mobile Global UC — 660 UC for ₹1,060" href="#contact"><b>660 UC</b><span>₹1,060</span></a>
           <a class="uc-pack order-link" data-game="PUBG Mobile Global UC — 1,800 UC for ₹2,550" href="#contact"><b>1,800 UC</b><span>₹2,550</span></a>
-          <a class="uc-pack order-link" data-game="PUBG Mobile Global UC — 3,850 UC for ₹4,900" href="#contact"><b>3,850 UC</b><span>₹4,900</span></a>
-          <a class="uc-pack order-link" data-game="PUBG Mobile Global UC — 8,100 UC for ₹9,800" href="#contact"><b>8,100 UC</b><span>₹9,800</span></a>
+          <a class="uc-pack order-link" data-game="PUBG Mobile Global UC — 3,850 UC for ₹4,850" href="#contact"><b>3,850 UC</b><span>₹4,850</span></a>
+          <a class="uc-pack order-link" data-game="PUBG Mobile Global UC — 8,100 UC for ₹9,650" href="#contact"><b>8,100 UC</b><span>₹9,650</span></a>
           <a class="uc-pack order-link" data-game="PUBG Mobile Global UC — 16,200 UC for ₹19,200" href="#contact"><b>16,200 UC</b><span>₹19,200</span></a>
-          <a class="uc-pack order-link" data-game="PUBG Mobile Global UC — 24,300 UC for ₹29,000" href="#contact"><b>24,300 UC</b><span>₹29,000</span></a>
+          <a class="uc-pack order-link" data-game="PUBG Mobile Global UC — 24,300 UC for ₹28,600" href="#contact"><b>24,300 UC</b><span>₹28,600</span></a>
         </div><a class="btn btn-primary pubg-continue player-continue" id="pubg-continue" href="#" target="_blank" rel="noopener noreferrer" hidden>Continue to Purchase</a><div class="delivery-note"><b>Delivery:</b> Get UC within 5–15 minutes after payment. PUBG Mobile Global version UC.<br>For more details, contact our WhatsApp helpline.</div></details></article>
         <article class="game-card" data-player-order="PUBG Mobile Player UID"><div class="game-top"><div class="game-logo"><img src="https://www.citypng.com/public/uploads/preview/hd-player-unknown-battlegrounds-black-mobile-logo-701751694790561ujmtc6dwxl.png?v=2026020600" alt="PUBG Mobile logo" loading="lazy"></div><div><h3>PUBG Global WOW Token</h3><span class="kind">WOW Tokens · Global</span></div></div><p>Enter your Player UID, choose a WOW Token pack, then continue to WhatsApp.</p><details class="uc-purchase"><summary class="btn btn-primary">View WOW Token packs</summary><div class="uid-entry"><label>Enter your PUBG Mobile Player UID</label><p>Find your UID in your in-game profile. Never share your password.</p><input class="player-id-input" type="text" inputmode="numeric" autocomplete="off" maxlength="15" placeholder="Enter UID number"><div class="uid-error" aria-live="polite">Enter a valid UID using 5–15 digits.</div></div><div class="uc-packs">
           <a class="uc-pack order-link" data-game="PUBG Global WOW Token — 60 Tokens for ₹140" href="#contact"><b>60 Tokens</b><span>₹140</span></a>
